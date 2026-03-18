@@ -63,14 +63,13 @@
     }
 
     .top-bar__logo {
-      font-family: var(--ff-serif);
-      font-size: 1.15rem;
-      font-weight: 600;
-      letter-spacing: .02em;
-      color: var(--dark);
+      display: flex;
+      align-items: center;
+      height: 36px;
+      width: auto;
     }
 
-    .top-bar__logo span { color: var(--accent); }
+    .top-bar__logo svg { height: 36px; width: auto; }
 
     .btn-call {
       display: inline-flex;
@@ -1022,7 +1021,15 @@
 
   <!-- ── Mobile top bar ─────────────────────────── -->
   <header class="top-bar">
-    <div class="top-bar__logo">Nikola <span>Adamová</span></div>
+    <div class="top-bar__logo"><svg width="100%" height="100%" viewBox="0 0 751 306" preserveAspectRatio="xMidYMid meet" viewBox="0 0 751 306" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M240.487 67.5511C241.597 67.4905 242.964 67.3834 244.019 67.707C245.585 68.1733 246.893 69.2568 247.643 70.7083C250.981 77.2102 243.454 96.4339 241.098 103.592C235.22 121.455 227.704 138.996 222.271 157.02C226.345 157.57 238.691 156.408 241.046 159.948L240.752 160.571C238.088 161.843 225.202 161.005 220.743 161.255C219.754 163.317 217.228 171.288 216.433 173.951C211.042 191.995 204.206 212.027 203.241 230.869C202.986 235.833 204.788 236.936 205.633 239.981C205.333 241.331 205.583 240.862 204.591 241.856C203.608 242.212 202.853 242.268 201.829 242.013C199.838 241.516 198.221 240.172 197.21 238.406C188.875 223.846 206.326 178.589 210.76 162.02C197.04 162.764 182.502 163.707 168.829 165.331C166.07 165.659 159.899 174.427 157.789 177.078C148.312 188.969 138.367 200.478 127.976 211.578C114.136 226.467 93.2982 246.637 72.4998 248.494C63.5439 249.294 54.9246 248.247 47.7538 242.435C42.5247 238.119 39.2127 231.91 38.5398 225.162C33.6226 177.106 128.446 164.32 161.159 160.934C163.525 158.871 171.975 147.356 174.235 144.367L200.875 108.817C209.06 97.9379 228 72.0394 240.487 67.5511ZM155.892 166.788C124.746 169.786 73.3945 179.618 50.785 203.725C43.0953 211.924 40.6688 228.547 49.7402 237.173C72.9156 258.455 115.005 216.273 129.501 199.548C134.576 193.693 153.273 173.408 156.256 167.277C156.062 166.914 156.138 166.873 155.892 166.788ZM172.692 159.798C184.901 158.657 200.152 157.475 212.398 157.304C214.092 153.32 215.585 148.99 216.971 144.871C223.223 126.303 230.654 108.143 236.589 89.4701C237.774 85.7412 239.834 80.0167 240.154 76.3099C239.741 75.8743 239.97 75.9396 239.516 75.9063C224.7 85.0037 196.359 126.447 184.649 141.813C182.482 144.657 173.864 156.205 172.202 159.191L172.343 159.772L172.692 159.798Z" fill="#1C1A18"/>
+<path d="M549.029 159.994C559.062 159.249 550.427 171.919 548.457 175.476C555.806 188.251 569.924 177.911 576.759 171.11C581.6 166.291 592.439 162.11 599.088 164.728C603.011 166.272 602.571 168.091 603.829 171.05C605.839 169.975 606.818 164.132 610.529 164.127C619.058 164.1 611.552 175.865 609.781 179.228C607.665 183.238 599.799 199.488 604.108 202.506C612.435 208.341 634.525 178.736 638.299 178.454L638.555 179.264C636.238 188.321 613.158 211.81 602.417 209.349C593.844 207.386 594.658 198.199 595.842 191.726C591.985 197.262 580.665 208.535 574.409 209.975C553.786 214.72 559.466 194.327 564.471 184.863C556.488 187.846 549.624 185.51 543.947 179.67C540.54 185.989 522.612 210.032 513.768 208.744C505.557 207.549 509.734 189.53 510.779 183.177C503.559 187.565 495.187 188.099 487.068 188.533C476.749 212.659 447.608 217.415 454.641 189.014C448.829 194.742 435.353 206.812 426.431 198.641C421.917 194.506 422.335 186.134 422.35 180.429C414.539 185.299 409.805 192.292 403.96 199.182C402.691 200.677 398.554 204.565 396.6 202.297C393.465 198.65 395.749 192.36 396.963 188.25C399.17 180.752 400.784 175.157 400.414 167.238C388.037 174.804 376.846 194.073 368.855 206.392C367.469 209.063 364.644 212.598 361.262 211.699C356.703 208.776 363.99 192.269 365.563 188.124C363.307 190.38 360.945 192.527 358.487 194.56C345.273 205.521 326.475 211.786 330.064 186.475C325.449 192.634 315.061 203.009 307.988 204.856C294.577 208.359 293.698 193.841 298.869 185.216C304.184 176.352 310.393 169.148 320.414 165.697C326.621 163.559 332.191 165.274 334.029 171.875C335.439 169.917 338.511 164.847 341.448 165.825C346.184 167.322 343.87 172.763 342.46 175.732C323.661 215.337 355.495 194.269 368.555 179.056C372.552 174.401 372.852 166.524 378.184 162.97C380.494 161.429 383.846 163.793 382.981 166.641C380.307 174.258 376.644 181.448 373.806 189.039C380.26 181.904 387.7 167.838 396.182 163.074C416.233 151.809 406.006 183.671 404.238 190.669C407.799 186.823 410.802 182.311 415.115 179.151C435.265 164.376 426.955 188.615 431.293 194.512C431.92 195.375 432.877 195.938 433.934 196.065C440.076 196.778 451.858 186.091 456.203 181.705C458.92 178.964 465.811 167.596 470.017 168.176C471.08 168.684 471.264 169.232 471.825 170.275C472.551 170.251 475.653 161.313 481.67 163.245C491.612 166.437 491.432 174.945 489.367 183.359C497.123 183.645 505.851 182.069 512.202 177.386C513.775 174.113 513.907 169.77 516.507 166.934C517.611 165.729 520.339 165.594 520.801 166.719C523.727 173.859 518.08 184.87 517.409 192.604C517.068 196.535 516.58 198.649 516.525 202.39C523.507 198.62 536.573 181.123 541.2 174.567C541.369 168.007 542.576 162.962 549.029 159.994ZM575.578 202.523C585.259 196.661 597.005 183.192 602.582 173.319C599.546 171.301 597.723 169.629 593.899 169.988C573.364 173.764 558.428 212.236 575.578 202.523ZM309.996 196.987C316.898 192.378 328.864 180.348 332.751 173.256C329.548 171.871 328.429 171.588 324.963 171.828C317.487 173.394 311.62 180.763 307.526 186.733C305.781 189.277 302.124 195.566 304.558 198.404C306.87 199.231 307.964 198.224 309.996 196.987ZM467.923 202.167C473.926 197.554 477.204 193.36 480.647 186.574C476.02 183.63 473.383 181.114 472.437 175.505C472.342 174.935 472.224 173.52 471.898 173.179C467.41 180.451 459.283 189.918 460.787 199.659C461.363 203.386 464.722 204.376 467.923 202.167ZM482.078 180.593L483.016 180.698C484.732 178.615 484.795 171.698 482.415 169.714C482.023 169.628 481.311 169.448 480.937 169.407C475.946 172.475 477.512 178.077 482.078 180.593Z" fill="#1C1A18"/>
+<path d="M324.179 83.3791C325.979 83.1957 327.692 82.9872 329.365 83.8631C330.83 84.6299 331.746 85.9309 332.179 87.5075C336.358 102.726 307.821 142.87 298.57 155.197C294.275 160.92 288.511 166.429 285.06 172.65C282.378 177.484 281.329 183.242 279.989 188.562C277.066 200.161 271.86 219.665 275.058 231.366C275.874 234.35 279.381 235.365 279.702 238.13L279.013 238.74C271.707 240.58 268.245 233.23 267.51 227.246C265.747 212.902 269.722 197.742 272.635 183.72C266.539 192.989 243.31 218.119 232.564 204.262C230.35 198.712 231.392 193.95 233.666 188.53C237.926 178.762 245.714 169.843 255.683 165.681C261.16 163.396 270.443 162.476 273.039 169.427C273.778 171.405 273.687 173.539 271.33 174.251C269.368 173.509 269.42 171.762 268.715 171.423C259.846 167.15 249.84 178.296 245.773 184.213C242.901 188.392 236.637 199.268 241.023 202.22C248.173 204.346 272.195 179.165 275.458 172.439C277.165 168.919 279.957 160.25 281.311 156.304C283.846 148.853 286.678 141.507 289.798 134.281C296.035 119.833 309.291 89.2808 324.179 83.3791ZM290.091 157.512C293.122 154.199 295.681 150.312 298.315 146.677C306.883 134.854 327.768 105.121 327.193 90.744C327.174 90.2678 326.958 90.1984 326.621 89.8796L325.864 89.8161C310.516 97.7901 295.406 140.792 289.511 157.183L289.734 157.584L290.091 157.512Z" fill="#1C1A18"/>
+<path d="M662.956 16.7168L663.432 17.0113C664.14 19.5412 658.728 55.0363 657.998 60.2937C656.113 74.9436 654.107 89.5776 651.984 104.195C649.864 118.749 647.367 133.5 646.594 148.2C646.124 157.05 647.081 193.776 650.987 200.377C653.509 204.644 658.313 206.708 661.559 210.345C665.702 214.988 667.246 221.066 666.898 227.186C666.505 234.52 662.904 241.31 657.052 245.741C654.771 247.431 652.248 248.728 650.099 250.594C644.683 255.293 648.13 263.397 652.505 267.489C654.591 269.442 659.358 272.161 659.182 275.12L658.332 275.55C655.299 275.564 654.544 275.179 651.977 273.791C651.804 273.676 651.639 273.556 651.474 273.431C643.598 267.491 643.436 259.528 639.619 251.579C638.654 249.952 636.564 247.682 635.046 246.604C624.122 238.856 623.231 221.07 631.794 211.285C633.807 208.986 636.55 206.212 638.427 203.727C639.949 201.737 641.031 199.446 641.599 197.007C644.019 186.636 640.792 160.215 637.345 149.633C636.748 145.94 632.193 138.762 632.197 135.346C632.212 128.684 635.226 118.214 636.689 111.729C639.461 99.1741 642.325 86.6391 645.277 74.1254C649.014 58.1426 652.472 41.6376 657.393 25.9463C658.405 22.7144 660.873 19.3257 662.956 16.7168ZM649.575 244.109C651.031 243.409 652.618 242.689 653.964 241.721C664.382 234.23 664.657 214.148 651.548 209.372C648.838 208.385 646.231 208.616 643.348 208.822C625.747 215.272 626.883 247.567 649.575 244.109ZM642.53 130.746C644.811 130.076 646.124 127.691 645.468 125.405C644.815 123.12 642.439 121.791 640.151 122.43C637.84 123.075 636.498 125.479 637.158 127.786C637.818 130.094 640.231 131.422 642.53 130.746Z" fill="#1C1A18"/>
+<path d="M716.028 41.3555C719.035 48.2702 695.104 74.959 690.241 81.0206C682.46 90.6971 674.602 100.313 666.674 109.868C662.479 114.943 657.022 121.857 652.644 126.447C652.017 124.604 654.624 107.461 655.398 104.459C655.735 103.163 656.38 102.061 657.319 101.069C664.547 93.4206 672.229 86.0058 679.516 78.4229L703.01 54.1983C706.908 50.2427 711.91 44.9354 716.028 41.3555Z" fill="#1C1A18"/>
+<path d="M628.966 126.514L629.263 126.635C629.663 127.403 629.109 128.703 628.926 129.67C628.277 133.054 628.607 135.572 629.322 138.936C619.135 140.794 620.063 142.889 612.01 148.542C607.041 152.029 601.097 155.313 594.83 154.237C593.4 153.273 592.417 152.902 592.465 151.095C594.115 149.628 599.051 148.423 603 145.237C608.24 141.013 611.06 136.216 615.706 132.556C621.577 131.669 624.085 130.032 628.966 126.514Z" fill="#1C1A18"/>
+</svg>
+</div>
     <div style="display:flex; align-items:center; gap:8px;">
       <button onclick="openModal('modal-cenik')" style="display:inline-flex; align-items:center; gap:6px; background:transparent; border:1.5px solid var(--surface2); color:var(--mid); font-family:var(--ff-sans); font-size:.8rem; font-weight:600; letter-spacing:.04em; padding:8px 14px; border-radius:100px; cursor:pointer; transition:all .25s; white-space:nowrap;" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--accent-dark)'" onmouseout="this.style.borderColor='var(--surface2)';this.style.color='var(--mid)'">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
@@ -1096,10 +1103,6 @@
             <div class="stat-card">
               <span class="stat-card__num">98+</span>
               <span class="stat-card__label">odstínů Echosline</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-card__num">100%</span>
-              <span class="stat-card__label">spokojenost zákaznic</span>
             </div>
             <div class="stat-card">
               <span class="stat-card__num">🇮🇹</span>
@@ -1429,7 +1432,15 @@
   <!-- ── Footer ─────────────────────────────────── -->
   <footer>
     <div class="footer__inner">
-      <span class="footer__brand">Nikola Adamová</span>
+      <span class="footer__brand"><svg height="28" width="auto" viewBox="0 0 751 306" preserveAspectRatio="xMidYMid meet" viewBox="0 0 751 306" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M240.487 67.5511C241.597 67.4905 242.964 67.3834 244.019 67.707C245.585 68.1733 246.893 69.2568 247.643 70.7083C250.981 77.2102 243.454 96.4339 241.098 103.592C235.22 121.455 227.704 138.996 222.271 157.02C226.345 157.57 238.691 156.408 241.046 159.948L240.752 160.571C238.088 161.843 225.202 161.005 220.743 161.255C219.754 163.317 217.228 171.288 216.433 173.951C211.042 191.995 204.206 212.027 203.241 230.869C202.986 235.833 204.788 236.936 205.633 239.981C205.333 241.331 205.583 240.862 204.591 241.856C203.608 242.212 202.853 242.268 201.829 242.013C199.838 241.516 198.221 240.172 197.21 238.406C188.875 223.846 206.326 178.589 210.76 162.02C197.04 162.764 182.502 163.707 168.829 165.331C166.07 165.659 159.899 174.427 157.789 177.078C148.312 188.969 138.367 200.478 127.976 211.578C114.136 226.467 93.2982 246.637 72.4998 248.494C63.5439 249.294 54.9246 248.247 47.7538 242.435C42.5247 238.119 39.2127 231.91 38.5398 225.162C33.6226 177.106 128.446 164.32 161.159 160.934C163.525 158.871 171.975 147.356 174.235 144.367L200.875 108.817C209.06 97.9379 228 72.0394 240.487 67.5511ZM155.892 166.788C124.746 169.786 73.3945 179.618 50.785 203.725C43.0953 211.924 40.6688 228.547 49.7402 237.173C72.9156 258.455 115.005 216.273 129.501 199.548C134.576 193.693 153.273 173.408 156.256 167.277C156.062 166.914 156.138 166.873 155.892 166.788ZM172.692 159.798C184.901 158.657 200.152 157.475 212.398 157.304C214.092 153.32 215.585 148.99 216.971 144.871C223.223 126.303 230.654 108.143 236.589 89.4701C237.774 85.7412 239.834 80.0167 240.154 76.3099C239.741 75.8743 239.97 75.9396 239.516 75.9063C224.7 85.0037 196.359 126.447 184.649 141.813C182.482 144.657 173.864 156.205 172.202 159.191L172.343 159.772L172.692 159.798Z" fill="#1C1A18"/>
+<path d="M549.029 159.994C559.062 159.249 550.427 171.919 548.457 175.476C555.806 188.251 569.924 177.911 576.759 171.11C581.6 166.291 592.439 162.11 599.088 164.728C603.011 166.272 602.571 168.091 603.829 171.05C605.839 169.975 606.818 164.132 610.529 164.127C619.058 164.1 611.552 175.865 609.781 179.228C607.665 183.238 599.799 199.488 604.108 202.506C612.435 208.341 634.525 178.736 638.299 178.454L638.555 179.264C636.238 188.321 613.158 211.81 602.417 209.349C593.844 207.386 594.658 198.199 595.842 191.726C591.985 197.262 580.665 208.535 574.409 209.975C553.786 214.72 559.466 194.327 564.471 184.863C556.488 187.846 549.624 185.51 543.947 179.67C540.54 185.989 522.612 210.032 513.768 208.744C505.557 207.549 509.734 189.53 510.779 183.177C503.559 187.565 495.187 188.099 487.068 188.533C476.749 212.659 447.608 217.415 454.641 189.014C448.829 194.742 435.353 206.812 426.431 198.641C421.917 194.506 422.335 186.134 422.35 180.429C414.539 185.299 409.805 192.292 403.96 199.182C402.691 200.677 398.554 204.565 396.6 202.297C393.465 198.65 395.749 192.36 396.963 188.25C399.17 180.752 400.784 175.157 400.414 167.238C388.037 174.804 376.846 194.073 368.855 206.392C367.469 209.063 364.644 212.598 361.262 211.699C356.703 208.776 363.99 192.269 365.563 188.124C363.307 190.38 360.945 192.527 358.487 194.56C345.273 205.521 326.475 211.786 330.064 186.475C325.449 192.634 315.061 203.009 307.988 204.856C294.577 208.359 293.698 193.841 298.869 185.216C304.184 176.352 310.393 169.148 320.414 165.697C326.621 163.559 332.191 165.274 334.029 171.875C335.439 169.917 338.511 164.847 341.448 165.825C346.184 167.322 343.87 172.763 342.46 175.732C323.661 215.337 355.495 194.269 368.555 179.056C372.552 174.401 372.852 166.524 378.184 162.97C380.494 161.429 383.846 163.793 382.981 166.641C380.307 174.258 376.644 181.448 373.806 189.039C380.26 181.904 387.7 167.838 396.182 163.074C416.233 151.809 406.006 183.671 404.238 190.669C407.799 186.823 410.802 182.311 415.115 179.151C435.265 164.376 426.955 188.615 431.293 194.512C431.92 195.375 432.877 195.938 433.934 196.065C440.076 196.778 451.858 186.091 456.203 181.705C458.92 178.964 465.811 167.596 470.017 168.176C471.08 168.684 471.264 169.232 471.825 170.275C472.551 170.251 475.653 161.313 481.67 163.245C491.612 166.437 491.432 174.945 489.367 183.359C497.123 183.645 505.851 182.069 512.202 177.386C513.775 174.113 513.907 169.77 516.507 166.934C517.611 165.729 520.339 165.594 520.801 166.719C523.727 173.859 518.08 184.87 517.409 192.604C517.068 196.535 516.58 198.649 516.525 202.39C523.507 198.62 536.573 181.123 541.2 174.567C541.369 168.007 542.576 162.962 549.029 159.994ZM575.578 202.523C585.259 196.661 597.005 183.192 602.582 173.319C599.546 171.301 597.723 169.629 593.899 169.988C573.364 173.764 558.428 212.236 575.578 202.523ZM309.996 196.987C316.898 192.378 328.864 180.348 332.751 173.256C329.548 171.871 328.429 171.588 324.963 171.828C317.487 173.394 311.62 180.763 307.526 186.733C305.781 189.277 302.124 195.566 304.558 198.404C306.87 199.231 307.964 198.224 309.996 196.987ZM467.923 202.167C473.926 197.554 477.204 193.36 480.647 186.574C476.02 183.63 473.383 181.114 472.437 175.505C472.342 174.935 472.224 173.52 471.898 173.179C467.41 180.451 459.283 189.918 460.787 199.659C461.363 203.386 464.722 204.376 467.923 202.167ZM482.078 180.593L483.016 180.698C484.732 178.615 484.795 171.698 482.415 169.714C482.023 169.628 481.311 169.448 480.937 169.407C475.946 172.475 477.512 178.077 482.078 180.593Z" fill="#1C1A18"/>
+<path d="M324.179 83.3791C325.979 83.1957 327.692 82.9872 329.365 83.8631C330.83 84.6299 331.746 85.9309 332.179 87.5075C336.358 102.726 307.821 142.87 298.57 155.197C294.275 160.92 288.511 166.429 285.06 172.65C282.378 177.484 281.329 183.242 279.989 188.562C277.066 200.161 271.86 219.665 275.058 231.366C275.874 234.35 279.381 235.365 279.702 238.13L279.013 238.74C271.707 240.58 268.245 233.23 267.51 227.246C265.747 212.902 269.722 197.742 272.635 183.72C266.539 192.989 243.31 218.119 232.564 204.262C230.35 198.712 231.392 193.95 233.666 188.53C237.926 178.762 245.714 169.843 255.683 165.681C261.16 163.396 270.443 162.476 273.039 169.427C273.778 171.405 273.687 173.539 271.33 174.251C269.368 173.509 269.42 171.762 268.715 171.423C259.846 167.15 249.84 178.296 245.773 184.213C242.901 188.392 236.637 199.268 241.023 202.22C248.173 204.346 272.195 179.165 275.458 172.439C277.165 168.919 279.957 160.25 281.311 156.304C283.846 148.853 286.678 141.507 289.798 134.281C296.035 119.833 309.291 89.2808 324.179 83.3791ZM290.091 157.512C293.122 154.199 295.681 150.312 298.315 146.677C306.883 134.854 327.768 105.121 327.193 90.744C327.174 90.2678 326.958 90.1984 326.621 89.8796L325.864 89.8161C310.516 97.7901 295.406 140.792 289.511 157.183L289.734 157.584L290.091 157.512Z" fill="#1C1A18"/>
+<path d="M662.956 16.7168L663.432 17.0113C664.14 19.5412 658.728 55.0363 657.998 60.2937C656.113 74.9436 654.107 89.5776 651.984 104.195C649.864 118.749 647.367 133.5 646.594 148.2C646.124 157.05 647.081 193.776 650.987 200.377C653.509 204.644 658.313 206.708 661.559 210.345C665.702 214.988 667.246 221.066 666.898 227.186C666.505 234.52 662.904 241.31 657.052 245.741C654.771 247.431 652.248 248.728 650.099 250.594C644.683 255.293 648.13 263.397 652.505 267.489C654.591 269.442 659.358 272.161 659.182 275.12L658.332 275.55C655.299 275.564 654.544 275.179 651.977 273.791C651.804 273.676 651.639 273.556 651.474 273.431C643.598 267.491 643.436 259.528 639.619 251.579C638.654 249.952 636.564 247.682 635.046 246.604C624.122 238.856 623.231 221.07 631.794 211.285C633.807 208.986 636.55 206.212 638.427 203.727C639.949 201.737 641.031 199.446 641.599 197.007C644.019 186.636 640.792 160.215 637.345 149.633C636.748 145.94 632.193 138.762 632.197 135.346C632.212 128.684 635.226 118.214 636.689 111.729C639.461 99.1741 642.325 86.6391 645.277 74.1254C649.014 58.1426 652.472 41.6376 657.393 25.9463C658.405 22.7144 660.873 19.3257 662.956 16.7168ZM649.575 244.109C651.031 243.409 652.618 242.689 653.964 241.721C664.382 234.23 664.657 214.148 651.548 209.372C648.838 208.385 646.231 208.616 643.348 208.822C625.747 215.272 626.883 247.567 649.575 244.109ZM642.53 130.746C644.811 130.076 646.124 127.691 645.468 125.405C644.815 123.12 642.439 121.791 640.151 122.43C637.84 123.075 636.498 125.479 637.158 127.786C637.818 130.094 640.231 131.422 642.53 130.746Z" fill="#1C1A18"/>
+<path d="M716.028 41.3555C719.035 48.2702 695.104 74.959 690.241 81.0206C682.46 90.6971 674.602 100.313 666.674 109.868C662.479 114.943 657.022 121.857 652.644 126.447C652.017 124.604 654.624 107.461 655.398 104.459C655.735 103.163 656.38 102.061 657.319 101.069C664.547 93.4206 672.229 86.0058 679.516 78.4229L703.01 54.1983C706.908 50.2427 711.91 44.9354 716.028 41.3555Z" fill="#1C1A18"/>
+<path d="M628.966 126.514L629.263 126.635C629.663 127.403 629.109 128.703 628.926 129.67C628.277 133.054 628.607 135.572 629.322 138.936C619.135 140.794 620.063 142.889 612.01 148.542C607.041 152.029 601.097 155.313 594.83 154.237C593.4 153.273 592.417 152.902 592.465 151.095C594.115 149.628 599.051 148.423 603 145.237C608.24 141.013 611.06 136.216 615.706 132.556C621.577 131.669 624.085 130.032 628.966 126.514Z" fill="#1C1A18"/>
+</svg>
+</span>
       <span>Kadeřnictví · StudioTrio · Jihlava</span>
       <a href="tel:+420604400795">+420 604 400 795</a>
     </div>
@@ -1491,114 +1502,104 @@
       </div>
       <div class="modal__body">
 
-        <!-- Střihy -->
+        <!-- Střih za sucha -->
         <div style="margin-bottom: 28px;">
           <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
-            <span style="font-size:.7rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); background:var(--accent-pale); padding:4px 12px; border-radius:100px;">Střihy</span>
-            <div style="flex:1; height:1px; background:var(--surface2);"></div>
-          </div>
-
-          <!-- Za sucha -->
-          <p style="font-size:.72rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--light); margin-bottom:6px;">Za sucha</p>
-          <div style="display:flex; flex-direction:column; gap:2px; margin-bottom:16px;">
-            <div style="display:flex; justify-content:space-between; align-items:baseline; padding:10px 0; border-bottom:1px solid var(--surface);">
-              <span style="font-size:.95rem; color:var(--dark);">Dámský střih za sucha</span>
-              <span style="font-size:.95rem; font-weight:600; color:var(--dark); white-space:nowrap; padding-left:16px;">od 450 Kč</span>
-            </div>
-            <div style="display:flex; justify-content:space-between; align-items:baseline; padding:10px 0; border-bottom:1px solid var(--surface);">
-              <span style="font-size:.95rem; color:var(--dark);">Pánský střih za sucha</span>
-              <span style="font-size:.95rem; font-weight:600; color:var(--dark); white-space:nowrap; padding-left:16px;">od 280 Kč</span>
-            </div>
-            <div style="display:flex; justify-content:space-between; align-items:baseline; padding:10px 0;">
-              <span style="font-size:.95rem; color:var(--dark);">Dětský střih za sucha (do 12 let)</span>
-              <span style="font-size:.95rem; font-weight:600; color:var(--dark); white-space:nowrap; padding-left:16px;">od 200 Kč</span>
-            </div>
-          </div>
-
-          <!-- Za mokra -->
-          <p style="font-size:.72rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--light); margin-bottom:6px;">Za mokra</p>
-          <div style="display:flex; flex-direction:column; gap:2px;">
-            <div style="display:flex; justify-content:space-between; align-items:baseline; padding:10px 0; border-bottom:1px solid var(--surface);">
-              <span style="font-size:.95rem; color:var(--dark);">Dámský střih za mokra + foukaná</span>
-              <span style="font-size:.95rem; font-weight:600; color:var(--dark); white-space:nowrap; padding-left:16px;">od 600 Kč</span>
-            </div>
-            <div style="display:flex; justify-content:space-between; align-items:baseline; padding:10px 0; border-bottom:1px solid var(--surface);">
-              <span style="font-size:.95rem; color:var(--dark);">Pánský střih za mokra</span>
-              <span style="font-size:.95rem; font-weight:600; color:var(--dark); white-space:nowrap; padding-left:16px;">od 350 Kč</span>
-            </div>
-            <div style="display:flex; justify-content:space-between; align-items:baseline; padding:10px 0;">
-              <span style="font-size:.95rem; color:var(--dark);">Dětský střih za mokra (do 12 let)</span>
-              <span style="font-size:.95rem; font-weight:600; color:var(--dark); white-space:nowrap; padding-left:16px;">od 260 Kč</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Barvení -->
-        <div style="margin-bottom: 28px;">
-          <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
-            <span style="font-size:.7rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); background:var(--accent-pale); padding:4px 12px; border-radius:100px;">Barvení</span>
+            <span style="font-size:.7rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); background:var(--accent-pale); padding:4px 12px; border-radius:100px;">Střih za sucha</span>
             <div style="flex:1; height:1px; background:var(--surface2);"></div>
           </div>
           <div style="display:flex; flex-direction:column; gap:2px;">
             <div style="display:flex; justify-content:space-between; align-items:baseline; padding:10px 0; border-bottom:1px solid var(--surface);">
-              <span style="font-size:.95rem; color:var(--dark);">Celkové barvení — krátké vlasy</span>
-              <span style="font-size:.95rem; font-weight:600; color:var(--dark); white-space:nowrap; padding-left:16px;">od 1 100 Kč</span>
+              <span style="font-size:.95rem; color:var(--dark);">Krátké</span>
+              <span style="font-size:.95rem; font-weight:600; color:var(--dark); white-space:nowrap; padding-left:16px;">290 Kč</span>
             </div>
             <div style="display:flex; justify-content:space-between; align-items:baseline; padding:10px 0; border-bottom:1px solid var(--surface);">
-              <span style="font-size:.95rem; color:var(--dark);">Celkové barvení — střední vlasy</span>
-              <span style="font-size:.95rem; font-weight:600; color:var(--dark); white-space:nowrap; padding-left:16px;">od 1 900 Kč</span>
-            </div>
-            <div style="display:flex; justify-content:space-between; align-items:baseline; padding:10px 0; border-bottom:1px solid var(--surface);">
-              <span style="font-size:.95rem; color:var(--dark);">Celkové barvení — dlouhé vlasy</span>
-              <span style="font-size:.95rem; font-weight:600; color:var(--dark); white-space:nowrap; padding-left:16px;">od 1 700 Kč</span>
+              <span style="font-size:.95rem; color:var(--dark);">Polodlouhé</span>
+              <span style="font-size:.95rem; font-weight:600; color:var(--dark); white-space:nowrap; padding-left:16px;">350 Kč</span>
             </div>
             <div style="display:flex; justify-content:space-between; align-items:baseline; padding:10px 0;">
-              <span style="font-size:.95rem; color:var(--dark);">Barvení kořínků</span>
-              <span style="font-size:.95rem; font-weight:600; color:var(--dark); white-space:nowrap; padding-left:16px;">od 800 Kč</span>
+              <span style="font-size:.95rem; color:var(--dark);">Dlouhé</span>
+              <span style="font-size:.95rem; font-weight:600; color:var(--dark); white-space:nowrap; padding-left:16px;">420 Kč</span>
             </div>
           </div>
         </div>
 
-        <!-- Techniky -->
+        <!-- Střih s mytím + styling -->
         <div style="margin-bottom: 28px;">
           <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
-            <span style="font-size:.7rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); background:var(--accent-pale); padding:4px 12px; border-radius:100px;">Techniky</span>
+            <span style="font-size:.7rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); background:var(--accent-pale); padding:4px 12px; border-radius:100px;">Střih s mytím + styling</span>
             <div style="flex:1; height:1px; background:var(--surface2);"></div>
           </div>
           <div style="display:flex; flex-direction:column; gap:2px;">
             <div style="display:flex; justify-content:space-between; align-items:baseline; padding:10px 0; border-bottom:1px solid var(--surface);">
-              <span style="font-size:.95rem; color:var(--dark);">Melíry — částečné</span>
-              <span style="font-size:.95rem; font-weight:600; color:var(--dark); white-space:nowrap; padding-left:16px;">od 1 100 Kč</span>
+              <span style="font-size:.95rem; color:var(--dark);">Krátké</span>
+              <span style="font-size:.95rem; font-weight:600; color:var(--dark); white-space:nowrap; padding-left:16px;">590 Kč</span>
             </div>
             <div style="display:flex; justify-content:space-between; align-items:baseline; padding:10px 0; border-bottom:1px solid var(--surface);">
-              <span style="font-size:.95rem; color:var(--dark);">Melíry — celkové</span>
-              <span style="font-size:.95rem; font-weight:600; color:var(--dark); white-space:nowrap; padding-left:16px;">od 1 900 Kč</span>
-            </div>
-            <div style="display:flex; justify-content:space-between; align-items:baseline; padding:10px 0; border-bottom:1px solid var(--surface);">
-              <span style="font-size:.95rem; color:var(--dark);">Balayage</span>
-              <span style="font-size:.95rem; font-weight:600; color:var(--dark); white-space:nowrap; padding-left:16px;">od 1 900 Kč</span>
+              <span style="font-size:.95rem; color:var(--dark);">Polodlouhé</span>
+              <span style="font-size:.95rem; font-weight:600; color:var(--dark); white-space:nowrap; padding-left:16px;">680 Kč</span>
             </div>
             <div style="display:flex; justify-content:space-between; align-items:baseline; padding:10px 0;">
-              <span style="font-size:.95rem; color:var(--dark);">Ombre</span>
-              <span style="font-size:.95rem; font-weight:600; color:var(--dark); white-space:nowrap; padding-left:16px;">od 1 900 Kč</span>
+              <span style="font-size:.95rem; color:var(--dark);">Dlouhé</span>
+              <span style="font-size:.95rem; font-weight:600; color:var(--dark); white-space:nowrap; padding-left:16px;">780 Kč</span>
             </div>
           </div>
         </div>
 
-        <!-- Péče -->
+        <!-- Barvení vlasů -->
+        <div style="margin-bottom: 28px;">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
+            <span style="font-size:.7rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); background:var(--accent-pale); padding:4px 12px; border-radius:100px;">Barvení vlasů</span>
+            <div style="flex:1; height:1px; background:var(--surface2);"></div>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:2px;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline; padding:10px 0; border-bottom:1px solid var(--surface);">
+              <span style="font-size:.95rem; color:var(--dark);">Krátké</span>
+              <span style="font-size:.95rem; font-weight:600; color:var(--dark); white-space:nowrap; padding-left:16px;">od 1 260 Kč</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline; padding:10px 0; border-bottom:1px solid var(--surface);">
+              <span style="font-size:.95rem; color:var(--dark);">Polodlouhé</span>
+              <span style="font-size:.95rem; font-weight:600; color:var(--dark); white-space:nowrap; padding-left:16px;">od 1 450 Kč</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline; padding:10px 0;">
+              <span style="font-size:.95rem; color:var(--dark);">Dlouhé</span>
+              <span style="font-size:.95rem; font-weight:600; color:var(--dark); white-space:nowrap; padding-left:16px;">od 1 790 Kč</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Melíry -->
+        <div style="margin-bottom: 28px;">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
+            <span style="font-size:.7rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); background:var(--accent-pale); padding:4px 12px; border-radius:100px;">Melíry</span>
+            <div style="flex:1; height:1px; background:var(--surface2);"></div>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:2px;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline; padding:10px 0; border-bottom:1px solid var(--surface);">
+              <span style="font-size:.95rem; color:var(--dark);">Částečné</span>
+              <span style="font-size:.95rem; font-weight:600; color:var(--dark); white-space:nowrap; padding-left:16px;">od 1 250 Kč</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline; padding:10px 0;">
+              <span style="font-size:.95rem; color:var(--dark);">Celkové</span>
+              <span style="font-size:.95rem; font-weight:600; color:var(--dark); white-space:nowrap; padding-left:16px;">od 1 750 Kč</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ostatní služby -->
         <div style="margin-bottom: 24px;">
           <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
-            <span style="font-size:.7rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); background:var(--accent-pale); padding:4px 12px; border-radius:100px;">Péče o vlasy</span>
+            <span style="font-size:.7rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); background:var(--accent-pale); padding:4px 12px; border-radius:100px;">Ostatní služby</span>
             <div style="flex:1; height:1px; background:var(--surface2);"></div>
           </div>
           <div style="display:flex; flex-direction:column; gap:2px;">
             <div style="display:flex; justify-content:space-between; align-items:baseline; padding:10px 0; border-bottom:1px solid var(--surface);">
-              <span style="font-size:.95rem; color:var(--dark);">Ošetřující maska</span>
-              <span style="font-size:.95rem; font-weight:600; color:var(--dark); white-space:nowrap; padding-left:16px;">od 300 Kč</span>
+              <span style="font-size:.95rem; color:var(--dark);">Balayage</span>
+              <span style="font-size:.95rem; font-weight:600; color:var(--dark); white-space:nowrap; padding-left:16px;">od 1 990 Kč</span>
             </div>
             <div style="display:flex; justify-content:space-between; align-items:baseline; padding:10px 0;">
-              <span style="font-size:.95rem; color:var(--dark);">Keratinové ošetření</span>
-              <span style="font-size:.95rem; font-weight:600; color:var(--dark); white-space:nowrap; padding-left:16px;">od 550 Kč</span>
+              <span style="font-size:.95rem; color:var(--dark);">Pánský střih</span>
+              <span style="font-size:.95rem; font-weight:600; color:var(--dark); white-space:nowrap; padding-left:16px;">280 Kč</span>
             </div>
           </div>
         </div>
