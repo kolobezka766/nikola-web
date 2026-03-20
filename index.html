@@ -8,7 +8,7 @@
   <meta name="description" content="Profesionální kadeřnictví Nikoly Adamové ve StudioTrio v Jihlavě. Střihy, barvení, melíry. Zavolejte a domluvte si termín." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     /* ── Reset & Base ─────────────────────────────── */
@@ -20,19 +20,21 @@
       --surface2:    #EAE1D6;
       
       --dark:        #1C1A18;
-      --mid:         #6B6057;
+      --mid:         #5C4F47;
       --light:       #A89A8E;
-      --accent:      #C4906A;
+      --accent:      #B8825A;
       --accent-dark: #A87550;
       --accent-pale: #F4E2D0;
+      --accent-rose: #E8B4A0;
       --white:       #FFFFFF;
       --radius:      14px;
       --radius-lg:   22px;
-      --shadow:      0 2px 24px rgba(28,26,24,.07);
-      --shadow-md:   0 8px 48px rgba(28,26,24,.12);
-      --ff-serif:    'Cormorant Garamond', Georgia, serif;
-      --ff-sans:     'DM Sans', system-ui, sans-serif;
-      --transition:  .25s cubic-bezier(.4,0,.2,1);
+      --shadow:      0 2px 16px rgba(28,26,24,.06), 0 1px 4px rgba(28,26,24,.04);
+      --shadow-md:   0 8px 32px rgba(28,26,24,.10), 0 2px 8px rgba(28,26,24,.06);
+      --shadow-lg:   0 20px 60px rgba(28,26,24,.12), 0 4px 16px rgba(28,26,24,.08);
+      --ff-serif:    'Playfair Display', Georgia, serif;
+      --ff-sans:     'Inter', system-ui, sans-serif;
+      --transition:  .2s cubic-bezier(.4,0,.2,1);
     }
 
     html { scroll-behavior: smooth; }
@@ -47,6 +49,18 @@
 
     img { max-width: 100%; display: block; }
     a { color: inherit; text-decoration: none; }
+
+    /* ── Accessibility & Interaction ─────────────── */
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+    a, button, [role="button"], [onclick] { cursor: pointer; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+      }
+    }
 
     /* ── Mobile sticky top bar ────────────────────── */
     .top-bar {
@@ -80,14 +94,15 @@
       font-family: var(--ff-sans);
       font-size: .875rem;
       font-weight: 600;
-      letter-spacing: .03em;
+      letter-spacing: .04em;
       padding: 9px 18px;
       border-radius: 100px;
       transition: background var(--transition), transform var(--transition);
       white-space: nowrap;
+      cursor: pointer;
     }
 
-    .btn-call:hover { background: var(--accent-dark); transform: translateY(-1px); }
+    .btn-call:hover { background: var(--accent-dark); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(184,130,90,.3); }
     .btn-call:active { transform: translateY(0); }
 
     .btn-call svg { flex-shrink: 0; }
@@ -175,7 +190,8 @@
       font-weight: 500;
       padding: 16px 32px;
       border-radius: 100px;
-      letter-spacing: .01em;
+      letter-spacing: .04em;
+      cursor: pointer;
       transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
       box-shadow: 0 4px 20px rgba(28,26,24,.2);
     }
@@ -183,7 +199,7 @@
     .btn-primary:hover {
       background: var(--accent-dark);
       transform: translateY(-2px);
-      box-shadow: 0 8px 28px rgba(196,144,106,.35);
+      box-shadow: 0 8px 28px rgba(184,130,90,.35);
     }
 
     .btn-secondary {
@@ -198,6 +214,7 @@
       padding: 15px 28px;
       border-radius: 100px;
       border: 1.5px solid var(--surface2);
+      cursor: pointer;
       transition: border-color var(--transition), background var(--transition), transform var(--transition);
     }
 
@@ -373,7 +390,8 @@
       background: var(--white);
       border-radius: var(--radius);
       padding: 28px 24px;
-      border: 1px solid var(--surface2);
+      border: 1px solid rgba(196,144,106,.12);
+      cursor: pointer;
       transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
     }
 
@@ -420,6 +438,7 @@
       border-radius: var(--radius-lg);
       overflow: hidden;
       box-shadow: var(--shadow);
+      border: 1px solid rgba(196,144,106,.12);
     }
 
     .product-card__header {
@@ -639,8 +658,8 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 60% 80% at 20% 50%, rgba(196,144,106,.15) 0%, transparent 60%),
-        radial-gradient(ellipse 50% 70% at 80% 50%, rgba(196,144,106,.1) 0%, transparent 55%);
+        radial-gradient(ellipse 60% 80% at 20% 50%, rgba(184,130,90,.15) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 70% at 80% 50%, rgba(184,130,90,.1) 0%, transparent 55%);
       pointer-events: none;
     }
 
@@ -682,15 +701,16 @@
       font-weight: 600;
       padding: 18px 40px;
       border-radius: 100px;
-      letter-spacing: .01em;
+      letter-spacing: .04em;
+      cursor: pointer;
       transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
-      box-shadow: 0 6px 28px rgba(196,144,106,.4);
+      box-shadow: 0 6px 28px rgba(184,130,90,.4);
     }
 
     .btn-cta-big:hover {
       background: #d4a07a;
       transform: translateY(-2px);
-      box-shadow: 0 12px 36px rgba(196,144,106,.5);
+      box-shadow: 0 12px 36px rgba(184,130,90,.5);
     }
 
     .btn-cta-ghost {
@@ -705,6 +725,7 @@
       padding: 17px 32px;
       border-radius: 100px;
       border: 1.5px solid rgba(255,255,255,.2);
+      cursor: pointer;
       transition: border-color var(--transition), color var(--transition), transform var(--transition);
     }
 
