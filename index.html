@@ -110,18 +110,94 @@
     /* ── Hero ─────────────────────────────────────── */
     .hero {
       min-height: 92svh;
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 1fr 420px;
       align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 60px 24px 80px;
+      padding: 60px 0 60px 7vw;
       position: relative;
       overflow: hidden;
+      background: var(--bg);
+      gap: 0;
+    }
+
+    .hero__content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    /* Right decorative panel */
+    .hero__visual {
+      height: 100%;
+      min-height: 92svh;
+      position: relative;
       background:
-        radial-gradient(ellipse 70% 55% at 80% 20%, #f0d9c8 0%, transparent 60%),
-        radial-gradient(ellipse 60% 50% at 20% 80%, #e8ddd4 0%, transparent 55%),
-        var(--bg);
+        radial-gradient(ellipse 80% 60% at 60% 40%, #e8c9aa 0%, transparent 65%),
+        radial-gradient(ellipse 70% 80% at 40% 80%, #d4b08a 0%, transparent 55%),
+        linear-gradient(160deg, #f0e0cc 0%, #e0c8a8 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero__visual::before {
+      content: 'A';
+      font-family: var(--ff-serif);
+      font-size: 52vmin;
+      font-weight: 300;
+      font-style: italic;
+      color: rgba(255,255,255,.32);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      line-height: 1;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .hero__visual-badge {
+      position: absolute;
+      bottom: 48px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255,255,255,.72);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 100px;
+      padding: 10px 22px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      white-space: nowrap;
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      color: var(--mid);
+      text-transform: uppercase;
+      box-shadow: var(--shadow-md);
+    }
+
+    .hero__visual-badge::before {
+      content: '✦';
+      color: var(--accent);
+      font-size: .7rem;
+    }
+
+    .hero__monogram {
+      font-family: var(--ff-serif);
+      font-size: clamp(6rem, 14vw, 11rem);
+      font-weight: 300;
+      font-style: italic;
+      color: rgba(28,26,24,.12);
+      line-height: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      user-select: none;
+      pointer-events: none;
     }
 
     .hero__eyebrow {
@@ -130,13 +206,49 @@
       gap: 8px;
       background: var(--accent-pale);
       color: var(--accent-dark);
-      font-size: .8rem;
+      font-size: .78rem;
       font-weight: 600;
       letter-spacing: .12em;
       text-transform: uppercase;
       padding: 6px 16px;
       border-radius: 100px;
       margin-bottom: 28px;
+    }
+
+    /* Hero stats strip */
+    .hero__stats {
+      display: flex;
+      gap: 0;
+      margin-top: 48px;
+      border-top: 1px solid var(--surface2);
+      padding-top: 28px;
+      max-width: 480px;
+    }
+
+    .hero__stat {
+      flex: 1;
+      padding-right: 24px;
+      border-right: 1px solid var(--surface2);
+    }
+    .hero__stat:last-child { border-right: none; padding-right: 0; padding-left: 24px; }
+    .hero__stat:not(:first-child):not(:last-child) { padding-left: 24px; }
+
+    .hero__stat-num {
+      font-family: var(--ff-serif);
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: var(--accent);
+      display: block;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .hero__stat-label {
+      font-size: .72rem;
+      color: var(--light);
+      font-weight: 500;
+      letter-spacing: .06em;
+      text-transform: uppercase;
     }
 
     .hero__name {
@@ -280,13 +392,23 @@
     }
 
     .section__label {
-      font-size: .75rem;
-      font-weight: 600;
-      letter-spacing: .15em;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .18em;
       text-transform: uppercase;
       color: var(--accent);
-      margin-bottom: 12px;
-      display: block;
+      margin-bottom: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section__label::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 1.5px;
+      background: var(--accent);
+      border-radius: 2px;
     }
 
     .section__heading {
@@ -332,21 +454,55 @@
       background:
         radial-gradient(ellipse at 30% 40%, #d4b89a 0%, transparent 50%),
         radial-gradient(ellipse at 70% 70%, #c9a07a 0%, transparent 45%),
-        linear-gradient(145deg, #e8ddd4 0%, #d4c4b4 100%);
+        linear-gradient(145deg, #2a2420 0%, #1a1210 100%);
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    /* Decorative frame lines around monogram */
+    .about__visual-inner::before,
+    .about__visual-inner::after {
+      content: '';
+      position: absolute;
+      border: 1px solid rgba(184,130,90,.3);
+      border-radius: var(--radius);
+      pointer-events: none;
+    }
+    .about__visual-inner::before {
+      inset: 32px;
+    }
+    .about__visual-inner::after {
+      inset: 40px;
+      border-color: rgba(184,130,90,.15);
     }
 
     .about__visual-text {
       font-family: var(--ff-serif);
-      font-size: 5rem;
+      font-size: 8rem;
       font-weight: 300;
-      color: rgba(255,255,255,.6);
-      letter-spacing: -.02em;
+      font-style: italic;
+      color: rgba(255,255,255,.88);
+      letter-spacing: .02em;
       line-height: 1;
       text-align: center;
       user-select: none;
+      position: relative;
+      z-index: 1;
+    }
+
+    .about__visual-sub {
+      font-family: var(--ff-sans);
+      font-size: .68rem;
+      font-weight: 600;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-top: 16px;
+      position: relative;
+      z-index: 1;
     }
 
     .about__stats {
@@ -359,12 +515,15 @@
     .stat-card {
       background: var(--surface);
       border-radius: var(--radius);
-      padding: 20px;
+      padding: 22px 20px;
+      border-left: 3px solid var(--accent-pale);
+      transition: border-color var(--transition);
     }
+    .stat-card:hover { border-left-color: var(--accent); }
 
     .stat-card__num {
       font-family: var(--ff-serif);
-      font-size: 2.2rem;
+      font-size: 2.4rem;
       font-weight: 300;
       color: var(--accent);
       display: block;
@@ -373,7 +532,7 @@
     }
 
     .stat-card__label {
-      font-size: .8rem;
+      font-size: .78rem;
       color: var(--mid);
       font-weight: 500;
       letter-spacing: .04em;
@@ -389,29 +548,30 @@
     .service-card {
       background: var(--white);
       border-radius: var(--radius);
-      padding: 28px 24px;
+      padding: 32px 24px 28px;
       border: 1px solid rgba(196,144,106,.12);
+      border-top: 3px solid var(--accent);
       cursor: pointer;
       transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
+      position: relative;
     }
 
     .service-card:hover {
       box-shadow: var(--shadow-md);
-      transform: translateY(-4px);
-      border-color: var(--accent);
+      transform: translateY(-5px);
+      border-top-color: var(--accent-dark);
     }
 
     .service-card__icon {
-      width: 44px;
-      height: 44px;
-      background: var(--accent-pale);
-      border-radius: 12px;
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--accent-pale) 0%, #fdeee3 100%);
+      border-radius: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
       color: var(--accent-dark);
-      font-size: 1.3rem;
     }
 
     .service-card__title {
@@ -663,6 +823,16 @@
       pointer-events: none;
     }
 
+    .cta-strip__quote {
+      font-family: var(--ff-serif);
+      font-style: italic;
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: var(--accent);
+      margin-bottom: 20px;
+      position: relative;
+      opacity: .9;
+    }
+
     .cta-strip__heading {
       font-family: var(--ff-serif);
       font-size: clamp(2.2rem, 6vw, 4rem);
@@ -765,6 +935,18 @@
     }
 
     /* ── Responsive ───────────────────────────────── */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 80px 24px 60px;
+        text-align: center;
+        min-height: auto;
+      }
+      .hero__content { align-items: center; }
+      .hero__visual { display: none; }
+      .hero__stats { margin-left: auto; margin-right: auto; justify-content: center; }
+    }
+
     @media (max-width: 768px) {
       .about-grid { grid-template-columns: 1fr; }
       .about__visual { aspect-ratio: 16/9; }
@@ -772,7 +954,6 @@
       .location-grid { grid-template-columns: 1fr; }
       .map-wrapper { aspect-ratio: 1/1; }
       .section { padding: 60px 20px; }
-      .hero { padding: 48px 20px 72px; }
     }
 
     @media (max-width: 480px) {
@@ -1067,31 +1248,56 @@
 
   <!-- ── Hero ───────────────────────────────────── -->
   <section class="hero" id="home">
-    <span class="hero__eyebrow">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
-      Kadeřnictví · Jihlava · StudioTrio
-    </span>
 
-    <h1 class="hero__name">Nikola <em>Adamová</em></h1>
-    <p class="hero__title">Profesionální kadeřnice</p>
-    <p class="hero__tagline">
-      Střihy, barvení a péče o vlasy s důrazem na šetrnost
-      a krásné výsledky, které vydrží.
-    </p>
+    <!-- Left: content -->
+    <div class="hero__content">
+      <span class="hero__eyebrow">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+        Kadeřnictví · Jihlava · StudioTrio
+      </span>
 
-    <div class="hero__cta">
-      <a href="tel:+420604400795" class="btn-primary">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.12 1.19 2 2 0 012.11 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.45-.45a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-        </svg>
-        Objednat se
-      </a>
-      <a href="#kde-me-najdes" class="btn-secondary">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
-        </svg>
-        Kde najdu studio
-      </a>
+      <h1 class="hero__name">Nikola <em>Adamová</em></h1>
+      <p class="hero__title">Profesionální kadeřnice</p>
+      <p class="hero__tagline">
+        Střihy, barvení a péče o vlasy s důrazem na šetrnost
+        a krásné výsledky, které vydrží.
+      </p>
+
+      <div class="hero__cta">
+        <a href="tel:+420604400795" class="btn-primary">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.12 1.19 2 2 0 012.11 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.45-.45a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+          Objednat se
+        </a>
+        <a href="#kde-me-najdes" class="btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+          </svg>
+          Kde najdu studio
+        </a>
+      </div>
+
+      <!-- Stats strip -->
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-num">5+</span>
+          <span class="hero__stat-label">let praxe</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">98</span>
+          <span class="hero__stat-label">odstínů Echosline</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">2</span>
+          <span class="hero__stat-label">prémiové značky</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: decorative panel -->
+    <div class="hero__visual" aria-hidden="true">
+      <div class="hero__visual-badge">StudioTrio Jihlava</div>
     </div>
 
     <div class="hero__scroll-hint" aria-hidden="true">
@@ -1126,12 +1332,12 @@
               <span class="stat-card__label">odstínů Echosline</span>
             </div>
             <div class="stat-card">
-              <span class="stat-card__num">🇮🇹</span>
-              <span class="stat-card__label">italská profesionální kosmetika</span>
+              <span class="stat-card__num">1945</span>
+              <span class="stat-card__label">rok vzniku Framesi</span>
             </div>
             <div class="stat-card">
-              <span class="stat-card__num">♻️</span>
-              <span class="stat-card__label">šetrné složení</span>
+              <span class="stat-card__num">0</span>
+              <span class="stat-card__label">PPD ani rezorcinol</span>
             </div>
           </div>
 
@@ -1153,6 +1359,7 @@
         <div class="about__visual">
           <div class="about__visual-inner">
             <div class="about__visual-text">NA</div>
+            <span class="about__visual-sub">Kadeřnice · Jihlava</span>
           </div>
         </div>
       </div>
@@ -1170,22 +1377,30 @@
 
       <div class="services-grid fade-in">
         <div class="service-card">
-          <div class="service-card__icon">✂️</div>
+          <div class="service-card__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg>
+          </div>
           <h3 class="service-card__title">Střih &amp; styling</h3>
           <p class="service-card__desc">Klasické i moderní střihy, foukaná, tvarování, finální styling pro každý typ vlasů.</p>
         </div>
         <div class="service-card">
-          <div class="service-card__icon">🎨</div>
+          <div class="service-card__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          </div>
           <h3 class="service-card__title">Barvení vlasů</h3>
           <p class="service-card__desc">Plné barvení, přebarvení, krytí šedin — s šetrnou Echosline barvou bez agresivních složek.</p>
         </div>
         <div class="service-card">
-          <div class="service-card__icon">☀️</div>
+          <div class="service-card__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12c0-2.21 1.79-4 4-4s4 1.79 4 4"/><path d="M6 17c1.5-2 3.5-3 6-3s4.5 1 6 3"/></svg>
+          </div>
           <h3 class="service-card__title">Melíry &amp; balayage</h3>
           <p class="service-card__desc">Jemné melírování, balayage, ombré — přirozené přechody a zářivé výsledky.</p>
         </div>
         <div class="service-card">
-          <div class="service-card__icon">💆</div>
+          <div class="service-card__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          </div>
           <h3 class="service-card__title">Péče o vlasy</h3>
           <p class="service-card__desc">Regenerace, ošetření, rekonstrukce poškozených vlasů pomocí prémiových produktů.</p>
         </div>
@@ -1272,6 +1487,7 @@
   <!-- ── CTA Strip ───────────────────────────────── -->
   <section class="cta-strip">
     <div class="container">
+      <p class="cta-strip__quote">"Střih, který vás provází celé týdny."</p>
       <h2 class="cta-strip__heading">Zarezervujte si <em>termín</em></h2>
       <div class="cta-strip__buttons">
         <a href="tel:+420604400795" class="btn-cta-big">
