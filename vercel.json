@@ -1,0 +1,33 @@
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-hashes' 'sha256-D5TQoPJMyFDt03hkDmpGXuKzxCBbbMBg1RLYw+OP8aA=' 'sha256-Ngf3jft089HLKVHnw8yJnrGgOu1FSfgnOlQMKxH0nxg=' 'sha256-OknJjHACGg+P3Y2t1+oxYTNhBS1eZX1okyDDMAS/bYI=' 'sha256-ZGGWWqJ8GfxXX4d8FxlbT/MfV4Y4E8h3MBvWiasnoC0=' 'sha256-ZeszL9ne3DAGM/Op7ZRPdJ3Xg+6R4LTH2poxvHGxnaU=' 'sha256-asO/y4/iQg4lghlDwDQu+CR8H2phBFCJrxpDGwHzj3c=' 'sha256-fcIEa5IVx44pHKoVf1d3YsaHPtyeInWdnxFja0z5XrY=' 'sha256-m7D7BkXCY6xCO6uocjquVnOmhr0WPbrScJzbnp023cg=' 'sha256-v4tPfK9XDOrpe9hf7uqDB5dM2pmFWc1CFCbhdFpl8cA=' 'sha256-z9N8qJQ5lxxZrBh/6HvsTJ1OGjSP+raZdfJsL8wMnr0=' 'sha256-zU0kPfttCbrVZESo1PCBMapZmJJ7AuCF37/xUFJOBSc='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formsubmit.co; frame-src https://maps.google.com https://www.google.com; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://formsubmit.co; upgrade-insecure-requests;"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=()"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000"
+        }
+      ]
+    }
+  ]
+}
